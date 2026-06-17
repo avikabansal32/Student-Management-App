@@ -20,23 +20,23 @@ while True:
             print("Student added")
             Student[roll_num] = [name, english, hindi, sst, sci, maths, total]
 
-    if choice == 2:
+    elif choice == 2:
         roll_num = int(input("Enter the roll number of student you want to remove: ")) 
-        for roll_num in Student:
-           del Student[roll_num]
-           print("Student removed Successfully")
+        if roll_num in Student[roll_num]:    
+            del Student[roll_num]
+            print("Student removed Successfully")
 
         else:
             print("Student not found")
 
-    if choice == 3:
+    elif choice == 3:
         roll_num = int(input("Enter the roll number of student you want to veiw: "))
-        for roll_num in Student:
+        if roll_num in Student:
             print(Student[roll_num])
         else:
             print("Roll number invalid.")
 
-    if choice == 4:
+    elif choice == 4:
        if len(Student) == 0:
         print("No students found")
     
@@ -44,6 +44,6 @@ while True:
             for roll_num, data in Student.items():
              print("Name:", data[0], "| Percentage:", data[6], "%")     
     
-    if choice == 5:
+    elif choice == 5:
         print("----THANK YOU FOR VISITING!!<3<3----")
         break
