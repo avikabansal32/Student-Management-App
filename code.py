@@ -45,4 +45,5 @@ while True:
              print("Name:", data[0], "| Percentage:", data[6], "%")     
     
     if choice == 5:
+        print("----THANK YOU FOR VISITING!!<3<3----")
         break
